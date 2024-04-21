@@ -7,7 +7,7 @@ export default function Dashboard() {
   const currentDate = new Date();
 
   // Define options for formatting the date
-  const options = {
+  const options: Intl.DateTimeFormatOptions = {
     weekday: 'long', // Display full name of the day of the week
     month: 'long',   // Display full name of the month
     day: 'numeric',  // Display day of the month
