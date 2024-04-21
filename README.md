@@ -6,7 +6,7 @@ I ended up only being able to spend a few hours working on this, and with more t
 
 I committed to sending this to you by Sunday, so I'll be stopping at this point and sending it in.
 
-View a live demo of the mockup [here](https://www.shepherd-mockup.moyela.com)
+View a live demo of the mockup [here](https://shepherd-mockup.moyela.com/).
 <dl>
   <dt>Future plans:</dt>
   <dd>- Add a tic tac toe game implementation</dd>
