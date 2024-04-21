@@ -38,7 +38,7 @@ function ImageLink(props: {name:string, address:string, img_src:string, img_alt:
 }
 
 
-export default function Header() {
+export default function Sidebar() {
     const twitter = "./twitter_icon.svg"
     const x = "./twitter_x_icon.svg"
     const [twitterIcon, setTwitterIcon ] = useState(twitter)
