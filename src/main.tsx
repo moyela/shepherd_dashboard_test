@@ -8,19 +8,15 @@ import Footer from './components/footer';
 function Root() {
   
   return (
-    <div id='viewport' className=''>
-      <div id="header" className='w-full bg-slate-100 pb-5 pt-10'>
-        <div className='w-2/3 mx-auto'>
+    <div id='viewport' className='flex flex-row'>
+      <div id="header" className='h-screen bg-slate-100 w-1/6'>
+        <div className=''>
           <Header/>
         </div>
       </div>
 
-      <div id='router-view' className="flex flex-col">
+      <div id='router-view' className="w-5/6">
         <AppRouter/>
-      </div>
-
-      <div className="px-48 py-10 bg-slate-100 font-mono italic">
-        <Footer/>
       </div>
     </div>
   )

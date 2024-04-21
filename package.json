@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.15",
     "@typescript-eslint/parser": "^6.14.0",
     "antd": "^5.12.2",
     "axios": "^1.6.3",
