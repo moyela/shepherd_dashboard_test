@@ -7,7 +7,7 @@ function RouteLink(props: {name:string, route:string}) {
     return (
       <div className="">
         <NavLink 
-        className="text-l hover:text-lime-700 py-1 px-1     rounded-2xl"
+        className="text-l hover:text-lime-700 py-1 px-1 rounded"
         to={props.route}
         title={`Go to my ${props.name}`}>
 
@@ -45,19 +45,19 @@ export default function Sidebar() {
 
     return (
 
-    <div className="text-left flex border-red-600">
+    <div className="text-left flex  border-red-600">
 
-        <nav className="font-mono flex flex-col gap-4 mx-5 pt-5 " id="nav-bar">
+        <nav className="font-sans flex flex-col gap-4 mx-5 pt-5" id="nav-bar">
             <RouteLink name="Home" route="/" />
             <RouteLink name="Find a tutor" route="/work" />
             <RouteLink name="Messages" route="/writing" />
-            <RouteLink name="Library" route="/" />
-            <RouteLink name="Ask Shepherd" route="/" />
-            <RouteLink name="Performance" route="/" />
-            <RouteLink name="Study Plans" route="/" />
-            <RouteLink name="Notes" route="/" />
-            <RouteLink name="Flahscards" route="/" />
-            <RouteLink name="Pinned Notes" route="/" />
+            <RouteLink name="Library" route="/wor" />
+            <RouteLink name="Ask Shepherd" route="/wor1" />
+            <RouteLink name="Performance" route="/wor2" />
+            <RouteLink name="Study Plans" route="/wor3" />
+            <RouteLink name="Notes" route="/wor4" />
+            <RouteLink name="Flahscards" route="/wor5" />
+            <RouteLink name="Pinned Notes" route="/wor6" />
         </nav>
     </div>
     );

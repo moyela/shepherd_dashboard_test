@@ -1,7 +1,4 @@
-import Dashboard from './dashboard.js'
-import Work from './work.js'
-import Writing from './writing.js'
-import Art from './art.js'
+import Dashboard from '../components/dashboard.js'
 import ErrorPage from './error_default.js'
 import { Route , Routes} from "react-router-dom";
 
@@ -10,9 +7,6 @@ export default function Routing() {
     <div>
       <Routes>
         <Route path="/" element={<Dashboard/>} />
-        <Route path="/work" element={<Work/>} /> 
-        <Route path='/writing' element={<Writing/>} />
-        <Route path="/art" element={<Art/>} />
         <Route path="*" element={<ErrorPage/>} />
       </Routes>
     </div>

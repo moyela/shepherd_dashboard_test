@@ -1,3 +1,4 @@
+import ActivityFeed from "./activity_feed";
 
 export default function Dashboard() {
 
@@ -20,7 +21,7 @@ export default function Dashboard() {
 
 
     return (
-      <div className=' px-5 py-10 font-sans tracking-wide bg-green-100 flex flex-col gap-7'>
+      <div className=' px-5 py-10 font-sans tracking-wide flex flex-col gap-7'>
         <div>
           Hi Liam, Welcome back!
           <p>
@@ -31,7 +32,7 @@ export default function Dashboard() {
         {/* Weekly summary and Quiz performance */}
         <div className="flex flex-row gap-2">
 
-          <div className="basis-1/2 flex flex-col px-5 py-5 bg-red-500">
+          <div className="basis-1/2 flex flex-col px-5 py-2 bg-red-500">
           {/* Weekly summary card */}
             
             <div className="mb-2">
@@ -69,7 +70,9 @@ export default function Dashboard() {
                 
                 </div>
               </div>
+            {/* END of Cards studied and Time studied suboptions*/}
             </div>
+
             <div className="flex flex-row gap-5 mb-5">
             {/* Flashcard Performance and Carousel */}
 
@@ -105,13 +108,37 @@ export default function Dashboard() {
           </div>
           
 
-          <div className="basis-1/2 px-5 py-5 bg-blue-500">
-          {/* Quiz performance card */}
+          <div className="basis-1/2 px-5 py-2 bg-blue-500">
+          {/* Quiz performance sections */}
 
             Quiz Performance
           </div>
+
+        {/* END of Weekly summary and Quiz performance row*/}
         </div>
 
+        <div className="flex flex-row gap-2">
+        {/* Activity feed and Schedule section */}
+
+          <div className="basis-3/5 bg-yellow-300 flex flex-col px-5 py-2">
+          {/* Activity feed half */}
+            <div className="flex flex-row justify-between mb-2">
+              <div>
+                • Activity feed
+              </div>
+              <div className="border border-gray-100 rounded-md px-2">
+                <button>
+                  This week
+                </button>
+              </div>
+            </div>
+            
+            <ActivityFeed/>
+          </div>
+          <div className="basis-2/5 bg-green-300">
+            Schedule
+          </div>
+        </div>
 
         
       </div>

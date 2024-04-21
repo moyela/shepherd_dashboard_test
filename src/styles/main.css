@@ -28,7 +28,7 @@
 
 #nav-bar a.active {
   /* this styles the navigation routing links*/
-  background-color: #48a35e;
+  background-color: #2ca8f0;
   color: white;
 }
 
@@ -42,23 +42,3 @@ body {
   overflow-y: scroll;
 }
 
-/* Mobile Styles  */
-@media only screen and (width < 401px) {
-  body {
-    background-color: #f09a9d; /* Red */
-  }
-}
-
-/* Tablet Styles */
-@media only screen and (401px <= width <= 960px) {
-  body {
-    background-color: #f5cf8e; /* Yellow */
-  }
-}
-
-/* Desktop Styles */
-@media only screen and (width > 960px) {
-  body {
-    background-color: #b2d6ff; /* Blue */
-  }
-}
