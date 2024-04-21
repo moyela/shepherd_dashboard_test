@@ -1,4 +1,5 @@
 import ActivityFeed from "./activity_feed";
+import QuizPerformanceChart from "./quiz_performance_chart";
 
 export default function Dashboard() {
 
@@ -23,8 +24,10 @@ export default function Dashboard() {
     return (
       <div className=' px-5 py-10 font-sans tracking-wide flex flex-col gap-7'>
         <div>
-          Hi Liam, Welcome back!
-          <p>
+          <span className="font-bold text-xl">
+            Hi Liam, Welcome back!
+          </span>
+          <p className="text-slate-500 text-sm">
             • {dateString} • {hours}:{minutes}
           </p>
         </div>
@@ -32,10 +35,10 @@ export default function Dashboard() {
         {/* Weekly summary and Quiz performance */}
         <div className="flex flex-row gap-2">
 
-          <div className="basis-1/2 flex flex-col px-5 py-2 bg-red-500">
+          <div className="basis-1/2 flex flex-col px-5 py-2 border-2 border-gray-200 rounded-md">
           {/* Weekly summary card */}
             
-            <div className="mb-2">
+            <div className="mb-2 font-bold">
               Weekly Summary
             </div>
 
@@ -43,29 +46,38 @@ export default function Dashboard() {
             {/* Cards studied and Time studied suboptions*/}
 
               <div className="basis-1/2 flex flex-col">
-                <div>
+                <div className="text-slate-500 text-sm">
                   Cards studied
                 </div>
                 <div>
-                  <span className="text-xl font-semibold">
-                    0
-                  </span> cards
+                  <span className="text-xl font-semibold mr-1">
+                    0 
+                  </span> 
+                  <span className="text-slate-500 text-sm">
+                    cards
+                  </span>
                 </div>
               </div>
               <div className="basis-1/2 flex flex-col">
-                <div>
+                <div className="text-slate-500 text-sm">
                     Time studied
                   </div>
                 <div className="flex flex-row gap-2">
                   <div>
-                    <span className="text-xl font-semibold">
+                    <span className="text-xl font-semibold mr-1">
                       05
-                    </span> hrs 
+                    </span> 
+                    <span className="text-slate-500 text-sm">
+                      hrs
+                    </span> 
                   </div>
                   <div>
-                    <span className="text-xl font-semibold">
+                    <span className="text-xl font-semibold mr-1">
                       30 
-                    </span> minutes
+                    </span>
+                    <span className="text-slate-500 text-sm">
+                      minutes
+                    </span> 
                   </div>
                 
                 </div>
@@ -78,40 +90,44 @@ export default function Dashboard() {
 
               <div className="basis-1/2">
               {/* Flashcard performance */}
-                <div className="mb-1">
+                <div className="mb-1 text-slate-500">
                   Flashcard performance
                 </div>
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between text-slate-500 text-sm">
                   <span>Got it right</span>
                   <span>40%</span>
                 </div>
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between text-slate-500 text-sm">
                   <span>Didn't remember</span>
                   <span>40%</span>
                 </div>
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-row justify-between text-slate-500 text-sm">
                   <span>Got it wrong</span>
                   <span>20%</span>
                 </div>
 
               </div>
-              <div className="basis-1/2 bg-black">
-              {/* BLACK SQUARE => should be a Carousel of streaks */}
+              <div className="basis-1/2 border-2 border-gray-200 rounded-md">
+              {/* Should be a Carousel of streaks */}
                 
               </div>
            
             </div>
 
-            <div>
-              Current streak: <span className="font-semibold">20 days</span>
+            <div className="bg-gray-100 rounded px-4 py-1">
+              <span className="text-slate-500 text-sm">Current streak:</span> <span className="font-semibold">20 days</span>
             </div>
           </div>
           
 
-          <div className="basis-1/2 px-5 py-2 bg-blue-500">
+          <div className="basis-1/2 px-5 py-2 border-2 border-gray-200 bg-gray-100 rounded-md">
           {/* Quiz performance sections */}
-
-            Quiz Performance
+            <span className="font-bold">
+              Quiz Performance
+            </span>
+            <div>
+              <QuizPerformanceChart/>
+            </div>
           </div>
 
         {/* END of Weekly summary and Quiz performance row*/}
@@ -120,13 +136,13 @@ export default function Dashboard() {
         <div className="flex flex-row gap-2">
         {/* Activity feed and Schedule section */}
 
-          <div className="basis-3/5 bg-yellow-300 flex flex-col px-5 py-2">
+          <div className="basis-3/5 flex flex-col px-5 py-2 border-2 border-gray-200 rounded-md">
           {/* Activity feed half */}
             <div className="flex flex-row justify-between mb-2">
-              <div>
-                • Activity feed
+              <div className="font-bold">
+                Activity Feed
               </div>
-              <div className="border border-gray-100 rounded-md px-2">
+              <div className="border-2 border-gray-200 rounded-md px-2">
                 <button>
                   This week
                 </button>
@@ -135,8 +151,10 @@ export default function Dashboard() {
             
             <ActivityFeed/>
           </div>
-          <div className="basis-2/5 bg-green-300">
-            Schedule
+          <div className="basis-2/5 border-2 border-gray-200 rounded-md px-5 py-2">
+            <span className="font-bold">
+              Schedule
+            </span>
           </div>
         </div>
 

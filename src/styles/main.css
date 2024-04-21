@@ -23,17 +23,17 @@
 }
 
 .header-external-link:hover {
-  background-color: #92d4a2;
+  background-color: #0095ec;
 }
 
-#nav-bar a.active {
+.nav-bar a.active {
   /* this styles the navigation routing links*/
-  background-color: #2ca8f0;
-  color: white;
+  background-color: #e8f6ff;
+  color: #0095ec;
 }
 
-#nav-bar a {
-  background-color: #e0e0e0;
+.nav-bar a {
+  background-color: #ffffff;
 }
 
 /* ---------------------------- */

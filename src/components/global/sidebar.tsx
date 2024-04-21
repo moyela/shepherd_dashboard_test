@@ -1,13 +1,13 @@
 import { NavLink } from "react-router-dom";
-// import { ResumeIcon, GithubIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from "../assets";
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 
 // RouteLink renders the links for the site navigation links and external links
 function RouteLink(props: {name:string, route:string}) {
     return (
-      <div className="">
+      <div className=" nav-bar">
         <NavLink 
-        className="text-l hover:text-lime-700 py-1 px-1 rounded"
+        className=" text-slate-700 hover:text-blue-400 py-1 px-4 rounded-md w-auto"
         to={props.route}
         title={`Go to my ${props.name}`}>
 
@@ -17,27 +17,6 @@ function RouteLink(props: {name:string, route:string}) {
     )
   }
 
-// ImageLink renders the external profile links to socials and github etc
-function ImageLink(props: {name:string, address:string, img_src:string, img_alt:string }) {
-    return (
-        <div className=" rounded-sm">
-  
-        <a className="" 
-        href={props.address} 
-        title={`Go to my ${props.name}`}
-        target="_blank">
-            
-           <img 
-           src={props.img_src} 
-           alt={props.img_alt} 
-           className="header-external-link"
-           />
-        </a>
-    </div>
-    )
-}
-
-
 export default function Sidebar() {
     const twitter = "./twitter_icon.svg"
     const x = "./twitter_x_icon.svg"
@@ -45,9 +24,9 @@ export default function Sidebar() {
 
     return (
 
-    <div className="text-left flex  border-red-600">
+    <div className="text-left flex">
 
-        <nav className="font-sans flex flex-col gap-4 mx-5 pt-5" id="nav-bar">
+        <nav className="font-sans flex flex-col gap-4 mx-5 pt-5">
             <RouteLink name="Home" route="/" />
             <RouteLink name="Find a tutor" route="/work" />
             <RouteLink name="Messages" route="/writing" />
@@ -63,43 +42,3 @@ export default function Sidebar() {
     );
   }
   
-
-// template for svg links kept below:
-
-// function SVGLink(props: {name:string, address:string, whichicon:string}) {
-
-//     let icon
-
-//     switch (props.whichicon) {
-//         case 'resume':
-//             icon = <ResumeIcon />
-//             break;
-//         case 'linkedin':
-//             icon = <LinkedinIcon/>
-//             break;
-//         case 'github':
-//             icon = <GithubIcon/>
-//             break;
-//         case 'twitter':
-//             icon = <TwitterIcon/>
-//             break;
-//         case 'instagram':
-//             icon = <InstagramIcon/>
-//             break;
-//     }
-
-//     return (
-//         <div className="h-full">
-  
-//         <a className="" 
-//         href={props.address} 
-//         title={`Go to my ${props.name}`}
-//         target="_blank"
-//         >
-//             <div style={{color:'red'}} className="header-external-link  hover:h-7 hover:fill-white">
-//                 {icon}
-//             </div>
-//         </a>
-//     </div>
-//     )
-// }
