@@ -33,11 +33,11 @@ export default function ActivityFeed() {
           
           { feed.map(action => (
             <li key={action.id}>
-              <div className="flex flex-row mb-2">
+              <div className="flex flex-row mb-5">
                 <div className="basis-1/5">
                   Icon
                 </div>
-                <div className="flex flex-col basis-4/5">
+                <div className="flex flex-col gap-2 basis-4/5 text-sm">
                   <div>
                     {action.howlongago}
                   </div>
