@@ -1,27 +1,24 @@
 import ActivityFeed from "./activity_feed";
-import QuizPerformanceChart from "./quiz_performance_chart";
+import QuizPerformanceChart from "./quiz_performance";
+import Schedule from "./schedule"
+import WeeklySummaryCarousel from "./weekly_summary_carousel";
 
 export default function Dashboard() {
 
-  // get the current date from the date primitve and rebuild it based on mockup
+  // get date option
   const currentDate = new Date();
-
-  // Define options for formatting the date
   const options: Intl.DateTimeFormatOptions = {
     weekday: 'long', // Display full name of the day of the week
     month: 'long',   // Display full name of the month
     day: 'numeric',  // Display day of the month
   };
-
   const hours = currentDate.getHours();
   const minutes = currentDate.getMinutes();
-
-  // Convert the Date object to a localized string
   const dateString = currentDate.toLocaleString(undefined, options);
-
+  // ----------------
 
     return (
-      <div className=' px-5 py-4 font-sans tracking-wide flex flex-col gap-5'>
+      <div className='px-8 py-8 font-sans tracking-wide flex flex-col gap-5'>
         <div>
           <span className="font-semibold text-xl">
             Hi Liam, Welcome back!
@@ -37,11 +34,11 @@ export default function Dashboard() {
           <div className="basis-5/12 flex flex-col border border-gray-200 rounded-md">
           {/* Weekly summary card */}
             
-            <div className="mb-2 font-semibold px-5 py-2">
+            <div className="mb-2 font-semibold px-5 pt-2">
               Weekly Summary
             </div>
 
-            <div className="flex flex-row mb-3 px-5">
+            <div className="flex flex-row mb-3 px-5 border-b pb-2 border-slate-200">
             {/* Cards studied and Time studied suboptions*/}
 
               <div className="basis-1/2 flex flex-col">
@@ -84,12 +81,12 @@ export default function Dashboard() {
             {/* END of Cards studied and Time studied suboptions*/}
             </div>
 
-            <div className="flex flex-row gap-5 mb-5 px-5">
+            <div className="flex flex-row pb-2 px-5">
             {/* Flashcard Performance and Carousel */}
 
-              <div className="basis-1/2">
+              <div className="basis-1/2 border-r border-slate-200 pr-2">
               {/* Flashcard performance */}
-                <div className="mb-1 text-slate-500">
+                <div className="mb-1 text-slate-500 text-sm">
                   Flashcard performance
                 </div>
                 <div className="flex flex-row justify-between text-slate-500 text-sm">
@@ -106,9 +103,9 @@ export default function Dashboard() {
                 </div>
 
               </div>
-              <div className="basis-1/2 border border-gray-200 rounded-md">
+              <div className="basis-1/2 bg-gray-200 rounded-md">
               {/* Should be a Carousel of streaks */}
-                
+                <WeeklySummaryCarousel/>
               </div>
            
             </div>
@@ -150,10 +147,13 @@ export default function Dashboard() {
             
             <ActivityFeed/>
           </div>
-          <div className="basis-2/5 border border-gray-200 rounded-md px-5 py-2">
-            <span className="font-semibold">
+          <div className="basis-2/5 border flec flex-col border-gray-200 rounded-md px-5 py-2">
+            <div className="font-semibold">
               Schedule
-            </span>
+            </div>
+            <div>
+              <Schedule/>
+            </div>
           </div>
         </div>
 
