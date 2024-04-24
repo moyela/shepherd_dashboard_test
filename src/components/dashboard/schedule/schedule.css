@@ -1,0 +1,11 @@
+.calendar-date {
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 150%;
+    display: inline-block;
+  }
+  
+  .calendar-date.selected {
+    background-color: #d8eeff;
+    color: rgba(0, 132, 255, 0.977);
+  }

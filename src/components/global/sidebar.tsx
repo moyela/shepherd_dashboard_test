@@ -6,7 +6,7 @@ function RouteLink(props: {name:string, route:string}) {
     return (
       <div className=" nav-bar">
         <NavLink 
-        className=" text-slate-700 hover:text-blue-400 py-1 px-4 rounded-md w-auto"
+        className=" text-slate-500 text-sm hover:text-blue-400 py-1 px-4 rounded-md"
         to={props.route}
         title={`Go to my ${props.name}`}>
 

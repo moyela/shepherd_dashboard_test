@@ -1,7 +1,7 @@
-import ActivityFeed from "./activity_feed";
-import QuizPerformanceChart from "./quiz_performance";
-import Schedule from "./schedule"
-import WeeklySummaryCarousel from "./weekly_summary_carousel";
+import ActivityFeed from "./activity_feed/activity_feed";
+import QuizPerformanceChart from "./quiz_performance/quiz_performance";
+import Schedule from "./schedule/schedule"
+import WeeklySummaryCarousel from "./weekly_summary/weekly_summary_carousel";
 
 export default function Dashboard() {
 
