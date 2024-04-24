@@ -21,16 +21,16 @@ export default function CarouselSlider({ slides }: CarouselProps) {
     };
 
     return (
-    <div className="carousel-slider flex flex-row">
+    <div className=" flex flex-row justify-between">
         <div className="nav-buttons">
             <div className="arrow" onClick={prevSlide}>{'<'}</div>
         </div>
-        <div className="slide flex flex-col">
-            <div className="icon">{slides[currentSlide].icon}</div>
-            <div className="text-xs">{slides[currentSlide].text}</div>
+        <div className=" flex flex-col mx-auto text-center gap-6 mt-7">
+            <div className="text-4xl">{slides[currentSlide].icon}</div>
+            <div className="text-xs ">{slides[currentSlide].text}</div>
         </div>
         <div className="nav-buttons">
-            <div className="arrow" onClick={nextSlide}>{'>'}</div>
+            <div className="arrow text-sm" onClick={nextSlide}>{'>'}</div>
         </div>
     </div>
     );

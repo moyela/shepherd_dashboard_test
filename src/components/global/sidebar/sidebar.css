@@ -1,0 +1,24 @@
+#nav-bar a.active .nav-link {
+    /* this styles the navigation routing links*/
+    background-color: #e8f6ff;
+    color: #0095ec;
+}
+
+#nav-bar a .nav-link {
+    background-color: #ffffff;
+}
+
+#nav-bar a .nav-link .icon {
+    background-color: #ffffff;
+}
+
+#nav-bar a.active .nav-link .icon {
+    background-color:  #0095ec;
+    color: white;
+}
+
+
+.icon {
+    /* Styles for the circular icons */
+    transition: background-color 0.7s ease;
+}   

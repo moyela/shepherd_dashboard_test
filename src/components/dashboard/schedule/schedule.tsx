@@ -46,7 +46,7 @@ export default function Schedule()  {
 
     return (
         <div>
-            <div className="text-sm text-slate-500">
+            <div className="my-2 text-slate-500">
                 {getCurrentMonth()}
             </div>
             <div className="flex flex-row justify-between">
