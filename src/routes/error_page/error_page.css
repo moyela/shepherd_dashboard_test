@@ -1,0 +1,18 @@
+.loading-spinner {
+    border: 18px solid rgba(13, 158, 255, 0.3); /* Blue with opacity */
+    border-top: 18px solid #74beff; /* Blue */
+    border-radius: 50%; /* Circular shape */
+    width: 100px; /* Size of the spinner */
+    height: 100px; /* Size of the spinner */
+    animation: spin 1.2s linear infinite; /* Animation name, duration, timing function, and iteration count */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg); /* Start position */
+    }
+    100% {
+        transform: rotate(360deg); /* End position after one full rotation */
+    }
+}
+

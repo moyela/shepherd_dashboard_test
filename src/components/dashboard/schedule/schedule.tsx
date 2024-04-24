@@ -1,17 +1,11 @@
-// import Calendar from "react-calendar"
-// import 'react-calendar/dist/Calendar.css';
 import './schedule.css'; // Import CSS for styling
 import { useState, useEffect } from "react";
-
-// type ValuePiece = Date | null;
-
-// type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 export default function Schedule()  {
     const [weekDates, setWeekDates] = useState<Date[]>([]);
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
-    // Function to get the current week's dates
+    // Function to get the current week's dates ----------------------------------------------------------
     useEffect(() => {
       const getCurrentWeekDates = (): Date[] => {
         const today = new Date();
@@ -65,7 +59,7 @@ export default function Schedule()  {
                         <div className="mx-auto text-xl">
                             {date.getDate()}
                         </div>
-                        <div className="text-xs text-slate-700 mx-auto">
+                        <div className="text-xs text-slate-400 mx-auto uppercase">
                             {date.toLocaleDateString('en-US', { weekday: 'short' })} 
                         </div>
                     </div>
@@ -73,11 +67,5 @@ export default function Schedule()  {
             </div>
         </div>
     )
-    } 
+} 
    
-//     <div className="mx-auto text-xl">
-//     {date.getDate()}
-// </div>
-// <div className="text-xs">
-//     {date.toLocaleDateString('en-US', { weekday: 'short' })} 
-// </div>

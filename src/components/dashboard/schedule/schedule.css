@@ -3,6 +3,7 @@
     padding: 5px 15px;
     border-radius: 150%;
     display: inline-block;
+    color: slategray;
   }
   
   .calendar-date.selected {

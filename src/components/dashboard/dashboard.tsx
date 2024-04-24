@@ -18,13 +18,13 @@ export default function Dashboard() {
   // ----------------
 
     return (
-      <div className='px-8 py-8 font-sans tracking-wide flex flex-col gap-5'>
+      <div className='p-8 flex flex-col gap-5'>
         <div>
-          <span className="font-semibold text-xl">
+          <span className="font-semibold text-2xl">
             Hi Liam, Welcome back!
           </span>
-          <p className="text-slate-500 text-sm">
-            • {dateString} • {hours}:{minutes}
+          <p className="text-slate-500">
+            🌥️ • {dateString} • {hours}:{minutes}
           </p>
         </div>
 
@@ -34,11 +34,11 @@ export default function Dashboard() {
           <div className="basis-5/12 flex flex-col border border-gray-200 rounded-md">
           {/* Weekly summary card */}
             
-            <div className="mb-2 font-semibold px-5 pt-2">
+            <div className="mb-2 font-semibold text-lg px-5 pt-2">
               Weekly Summary
             </div>
 
-            <div className="flex flex-row mb-3 px-5 border-b pb-2 border-slate-200">
+            <div className="flex flex-row mb-3 px-5">
             {/* Cards studied and Time studied suboptions*/}
 
               <div className="basis-1/2 flex flex-col">
@@ -81,12 +81,12 @@ export default function Dashboard() {
             {/* END of Cards studied and Time studied suboptions*/}
             </div>
 
-            <div className="flex flex-row pb-2 px-5">
+            <div className="flex flex-row my-2 px-5 border-t border-slate-200">
             {/* Flashcard Performance and Carousel */}
 
-              <div className="basis-1/2 border-r border-slate-200 pr-2">
+              <div className="basis-1/2 border-r my-0 border-slate-200 pr-2">
               {/* Flashcard performance */}
-                <div className="mb-1 text-slate-500 text-sm">
+                <div className="mb-1 mt-3 text-slate-500 text-sm">
                   Flashcard performance
                 </div>
                 <div className="flex flex-row justify-between text-slate-500 text-sm">
@@ -103,7 +103,7 @@ export default function Dashboard() {
                 </div>
 
               </div>
-              <div className="basis-1/2 bg-gray-200 rounded-md">
+              <div className="basis-1/2 rounded-md">
               {/* Should be a Carousel of streaks */}
                 <WeeklySummaryCarousel/>
               </div>
@@ -118,7 +118,7 @@ export default function Dashboard() {
 
           <div className="basis-7/12 px-5 py-2 border border-gray-200 bg-gray-100 rounded-md">
           {/* Quiz performance sections */}
-            <span className="font-semibold">
+            <span className="font-semibold text-lg">
               Quiz Performance
             </span>
             <div>
@@ -135,8 +135,8 @@ export default function Dashboard() {
           <div className="basis-3/5 flex flex-col px-5 py-2 border border-gray-200 rounded-md">
           {/* Activity feed half */}
             <div className="flex flex-row justify-between mb-2">
-              <div className="font-semibold">
-                Activity Feed
+              <div className="font-semibold text-lg">
+              ⚡ Activity Feed
               </div>
               <div className="border border-gray-200 rounded-md px-2">
                 <button>
@@ -148,8 +148,8 @@ export default function Dashboard() {
             <ActivityFeed/>
           </div>
           <div className="basis-2/5 border flec flex-col border-gray-200 rounded-md px-5 py-2">
-            <div className="font-semibold">
-              Schedule
+            <div className="font-semibold text-lg">
+            ⏲️ Schedule
             </div>
             <div>
               <Schedule/>
