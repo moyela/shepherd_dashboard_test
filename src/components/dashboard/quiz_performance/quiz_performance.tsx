@@ -50,7 +50,7 @@ export const data = {
 export default function QuizPerformanceChart() {
     return (
       <>
-        {/* <Bar options={options} data={data} style={{position:"absolute"}}/>; */}
+        <Bar options={options} data={data} style={{position:""}}/>
       </>
     )
 }

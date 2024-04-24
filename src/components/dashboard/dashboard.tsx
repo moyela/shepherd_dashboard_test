@@ -18,8 +18,8 @@ export default function Dashboard() {
   // ----------------
 
     return (
-      <div className='p-8 flex flex-col gap-5 '>
-        <div>
+      <div className='pt-4 px-4 sm:p-8 flex flex-col gap-5 min-w-[320px]'>
+        <div className="whitespace-nowrap">
           <span className="font-semibold text-2xl">
             Hi Liam, Welcome back!
           </span>
@@ -29,9 +29,9 @@ export default function Dashboard() {
         </div>
 
         {/* Weekly summary and Quiz performance */}
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-col sm:flex-row gap-5">
 
-          <div className="basis-5/12 flex flex-col border border-gray-200 rounded-md">
+          <div className=" flex flex-col border border-gray-200 rounded-md  min-w-96">
           {/* Weekly summary card */}
             
             <div className="mb-2 font-semibold text-lg px-5 pt-2">
@@ -81,10 +81,10 @@ export default function Dashboard() {
             {/* END of Cards studied and Time studied suboptions*/}
             </div>
 
-            <div className="flex flex-row my-2 px-5 border-t border-slate-200">
+            <div className="flex flex-row my-2 pl-5 border-t border-slate-200">
             {/* Flashcard Performance and Carousel */}
 
-              <div className="basis-1/2 border-r py-5 border-slate-200 pr-2">
+              <div className=" border-r py-5 border-slate-200 pr-2 min-w-48">
               {/* Flashcard performance */}
                 <div className="mb-3 text-slate-500 text-sm">
                   Flashcard performance
@@ -107,7 +107,7 @@ export default function Dashboard() {
              
 
               </div>
-              <div className="basis-1/2 rounded-md">
+              <div className=" rounded-md min-w-48">
               {/* Should be a Carousel of streaks */}
                 <WeeklySummaryCarousel/>
               </div>
@@ -120,7 +120,7 @@ export default function Dashboard() {
           </div>
           
 
-          <div className="basis-7/12 px-5 py-2 border border-gray-200 bg-gray-100 rounded-md">
+          <div className="px-5 py-2 border border-gray-200 bg-gray-100 rounded-md min-w-96">
           {/* Quiz performance sections */}
             <span className="font-semibold text-lg">
             📚 Quiz Performance
@@ -133,10 +133,10 @@ export default function Dashboard() {
         {/* END of Weekly summary and Quiz performance row*/}
         </div>
 
-        <div className="flex flex-row gap-5">
+        <div className="flex flex-col sm:flex-row gap-5">
         {/* Activity feed and Schedule section */}
 
-          <div className="basis-3/5 flex flex-col border border-gray-200 rounded-md">
+          <div className="flex flex-col border border-gray-200 rounded-md w-max min-w-96">
           {/* Activity feed half */}
             <div className="flex flex-row justify-between px-5 py-3 border-b border-slate-200">
               <div className="font-semibold text-lg">
@@ -153,7 +153,7 @@ export default function Dashboard() {
             </div>
            
           </div>
-          <div className="basis-2/5 border flec flex-col border-gray-200 rounded-md">
+          <div className="border flec flex-col border-gray-200 rounded-md ">
             <div className="font-semibold text-lg px-5 py-3 border-b border-slate-200">
             ⏲️ Schedule
             </div>

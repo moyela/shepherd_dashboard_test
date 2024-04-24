@@ -3,7 +3,7 @@
 .arrow {
     position: relative;
     cursor: pointer;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     font-size: 40px;
     color: gray ;

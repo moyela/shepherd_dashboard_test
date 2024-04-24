@@ -13,7 +13,7 @@ function RouteLink(props: {name:string, route:string}) {
         >
           <div className="flex flex-row nav-link text-slate-500 font-semibold hover:text-blue-400 py-2 px-3 rounded-md">
           
-            <div className="icon bg-gray-400 flex items-center justify-center rounded-full w-8 h-8 mr-3">
+            <div className="icon bg-gray-400 flex items-center justify-center rounded-full w-8 h-8 sm:mr-3">
                 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ function RouteLink(props: {name:string, route:string}) {
                 </svg>
             </div>
 
-            <div className="pt-1 whitespace-nowrap">
+            <div className="pt-1 whitespace-nowrap hidden sm:block">
               {props.name}
             </div>
           </div>
@@ -40,18 +40,18 @@ function RouteLink(props: {name:string, route:string}) {
 
 export default function Sidebar() {
     return (
-      <nav className="font-sans flex flex-col gap-1 mr-2 ml-2 pt-5" id="nav-bar">
+      <nav className="font-sans flex flex-col gap-1 mx-0 sm:mx-2 sm:pt-5" id="nav-bar">
           <RouteLink name="Home" route="/" />
           <RouteLink name="Find a tutor" route="/tutor"/>
           <RouteLink name="Messages" route="/messages"/>
           <RouteLink name="Library" route="/library"/>
-          <div className="border-t border-gray-200 m-0 p-0"></div>
+          <div className="hidden sm:block border-t border-gray-200 m-0 p-0"></div>
           <RouteLink name="Ask Shepherd" route="/ask_shepherd"/>
           <RouteLink name="Performance" route="/performance"/>
           <RouteLink name="Study Plans" route="/study_plans"/>
           <RouteLink name="Notes" route="/notes"/>
-          <RouteLink name="Flahscards" route="/flashcards"/>
-          <div className="border-t border-gray-200 my-0 mx-0"></div>
+          <RouteLink name="Flashcards" route="/flashcards"/>
+          <div className="hidden sm:block border-t border-gray-200 my-0 mx-0"></div>
           <RouteLink name="Pinned Notes" route="/pinned_notes"/>
       </nav>
     );
