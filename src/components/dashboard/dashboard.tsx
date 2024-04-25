@@ -106,7 +106,7 @@ export default function Dashboard() {
                 </div>
               </div>
 
-              <div className="min-w-32 overflow-hidden">
+              <div className="min-w-32 max-w- overflow-hidden">
               {/* Should be a Carousel of streaks */}
                 <WeeklySummaryCarousel/>
               </div>
