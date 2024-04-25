@@ -18,7 +18,7 @@ export default function Dashboard() {
   // ----------------
 
     return (
-      <div className='pt-4 px-4 sm:p-8 flex flex-col gap-5 min-w-[320px]'>
+      <div className='pt-4 px-4 sm:p-8 flex flex-col gap-5'>
         <div className="whitespace-nowrap">
           <span className="font-semibold text-2xl">
             Hi Liam, Welcome back!
@@ -31,7 +31,7 @@ export default function Dashboard() {
         {/* Weekly summary and Quiz performance */}
         <div className="flex flex-col sm:flex-row gap-5">
 
-          <div className=" flex flex-col border border-gray-200 rounded-md  min-w-96">
+          <div className=" flex flex-col border border-gray-200 rounded-md min-w-96">
           {/* Weekly summary card */}
             
             <div className="mb-2 font-semibold text-lg px-5 pt-2">
@@ -104,14 +104,12 @@ export default function Dashboard() {
                     <span>20%</span>
                   </div>
                 </div>
-             
-
               </div>
-              <div className=" rounded-md min-w-48">
+
+              <div className="min-w-32 overflow-hidden">
               {/* Should be a Carousel of streaks */}
                 <WeeklySummaryCarousel/>
               </div>
-           
             </div>
 
             <div className="bg-gray-100 rounded px-4 py-1 my-0  ">
@@ -133,10 +131,13 @@ export default function Dashboard() {
         {/* END of Weekly summary and Quiz performance row*/}
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-5">
+
+
+        <div className="flex flex-col md:flex-row gap-5">
         {/* Activity feed and Schedule section */}
 
-          <div className="flex flex-col border border-gray-200 rounded-md w-max min-w-96">
+
+          <div className="flex flex-col border border-gray-200 rounded-md min-w-96 md:min-w-max">
           {/* Activity feed half */}
             <div className="flex flex-row justify-between px-5 py-3 border-b border-slate-200">
               <div className="font-semibold text-lg">
@@ -151,19 +152,46 @@ export default function Dashboard() {
             <div className="px-5 py-3">
               <ActivityFeed/>
             </div>
-           
           </div>
-          <div className="border flec flex-col border-gray-200 rounded-md ">
+
+
+
+          <div className="border flex flex-col border-gray-200 rounded-md min-w-96">
             <div className="font-semibold text-lg px-5 py-3 border-b border-slate-200">
             ⏲️ Schedule
             </div>
             <div className="px-5 py-3">
               <Schedule/>
             </div>
+            <div>
+              <div className="px-5 py-2 text-slate-500">
+                Upcoming events
+              </div>
+              <div className="px-5 py-2 text-xs text-slate-500">
+                Today
+              </div>
+              <div className="px-5 py-3 mb-4 flex flex-col gap-1 border-l-4 border-orange-400 bg-orange-50">
+                <div className="text-lg font-semibold">
+                  Chemistry lesson with Leslie Peters
+                </div>
+                <div className=" text-slate-500 text-xs">
+                  15:30 {'->'} 16:30 (1hr)
+                </div>
+              </div>
+              <div className="px-5 py-3 flex flex-col gap-1 border-l-4 border-green-400 bg-green-50">
+                <div className="text-lg font-semibold">
+                  Geography lesson with Chiji Makainde
+                </div>
+                <div className=" text-slate-500 text-xs">
+                  17:00 {'->'} 18:00 (1hr)
+                </div>
+              </div>
+            </div>
+          
+
+
           </div>
         </div>
-
-        
       </div>
 
 

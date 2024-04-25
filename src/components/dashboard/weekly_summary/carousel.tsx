@@ -21,7 +21,7 @@ export default function CarouselSlider({ slides }: CarouselProps) {
     };
 
     return (
-    <div className=" flex flex-row justify-between max-w-48">
+    <div className=" flex flex-row justify-between">
         <div className="">
             <div className="arrow" onClick={prevSlide}>{'<'}</div>
         </div>

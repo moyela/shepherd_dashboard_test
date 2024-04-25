@@ -19,11 +19,11 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
+const options = {
   responsive: true,
   plugins: {
     legend: {
-      position: 'top' as const,
+      display: false,
     },
 
     title: {
@@ -31,7 +31,22 @@ export const options = {
       text: 'Quiz Performance',
     },
   },
+
+  scales: {
+
+      y: {
+          grid: {
+              display: false, // Hide y-axis grid lines
+          },
+          ticks: {
+              color: 'rgba(0, 0, 0, 0.6)',
+          },
+      },
+  },
 };
+
+
+
   
 const labels = ['Bio', 'Chem', 'Phy', 'Eng', 'Econ', 'Sci', 'Lit'];
   
