@@ -20,6 +20,7 @@ ChartJS.register(
 );
 
 const options = {
+  maintainAspectRatio: false,
   responsive: true,
   plugins: {
     legend: {
@@ -63,9 +64,6 @@ export const data = {
 
 
 export default function QuizPerformanceChart() {
-    return (
-      <>
-        <Bar options={options} data={data} style={{position:"relative"}}/>
-      </>
-    )
+  
+    return <Bar options={options} data={data} style={{position:"relative"}}/>
 }

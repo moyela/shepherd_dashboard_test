@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./sidebar.css";
 
-// RouteLink renders the links for the site navigation links and external links
+// RouteLink renders the links for the sidebar navigation
 function RouteLink(props: {name:string, route:string}) {
     return (
       <div className="">
@@ -11,7 +11,7 @@ function RouteLink(props: {name:string, route:string}) {
         to={props.route}
         title={`Go to my ${props.name}`}
         >
-          <div className="flex flex-row nav-link text-slate-500 font-semibold hover:text-blue-400 py-2 px-3 rounded-md">
+          <div className="flex flex-row nav-link text-slate-500 font-semibold hover:text-blue-400 py-2 mb-1 sm:mb-0 px-5 sm:px-3 rounded-md">
           
             <div className=" icon bg-gray-400 items-center justify-center rounded-full w-5 h-5 sm:mr-3 hidden sm:flex">
                 

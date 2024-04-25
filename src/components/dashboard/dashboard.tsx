@@ -5,7 +5,7 @@ import WeeklySummaryCarousel from "./weekly_summary/weekly_summary_carousel";
 
 export default function Dashboard() {
 
-  // get date option
+  // get date for display
   const currentDate = new Date();
   const options: Intl.DateTimeFormatOptions = {
     weekday: 'long', // Display full name of the day of the week
@@ -118,12 +118,12 @@ export default function Dashboard() {
           </div>
           
 
-          <div className="px-5 py-2 border border-gray-200 bg-gray-100 rounded-md min-w-96">
+          <div className="border border-gray-200 bg-gray-100 rounded-md min-w-96">
           {/* Quiz performance sections */}
-            <span className="font-semibold text-lg">
+            <div className="px-5 py-2 font-semibold text-lg">
             📚 Quiz Performance
-            </span>
-            <div>
+            </div>
+            <div className="px-5 py-2 min-h-60">
               <QuizPerformanceChart/>
             </div>
           </div>
