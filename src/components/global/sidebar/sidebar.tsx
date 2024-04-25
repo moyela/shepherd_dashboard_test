@@ -13,7 +13,7 @@ function RouteLink(props: {name:string, route:string}) {
         >
           <div className="flex flex-row nav-link text-slate-500 font-semibold hover:text-blue-400 py-2 px-3 rounded-md">
           
-            <div className="icon bg-gray-400 flex items-center justify-center rounded-full w-8 h-8 sm:mr-3">
+            <div className=" icon bg-gray-400 items-center justify-center rounded-full w-5 h-5 sm:mr-3 hidden sm:flex">
                 
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ function RouteLink(props: {name:string, route:string}) {
                 </svg>
             </div>
 
-            <div className="pt-1 whitespace-nowrap hidden sm:block">
+            <div className="text-sm whitespace-nowrap">
               {props.name}
             </div>
           </div>
@@ -40,7 +40,7 @@ function RouteLink(props: {name:string, route:string}) {
 
 export default function Sidebar() {
     return (
-      <nav className="font-sans flex flex-col gap-1 mx-0 sm:mx-2 sm:pt-5" id="nav-bar">
+      <nav className="font-sans flex flex-row sm:flex-col gap-1 mx-0 sm:mx-2 sm:pt-5 overflow-auto" id="nav-bar">
           <RouteLink name="Home" route="/" />
           <RouteLink name="Find a tutor" route="/tutor"/>
           <RouteLink name="Messages" route="/messages"/>

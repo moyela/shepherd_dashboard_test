@@ -8,8 +8,8 @@ import Sidebar from './components/global/sidebar/sidebar.js';
 function Root() {
   
   return (
-    <div id='viewport' className='flex flex-row select-none'>
-      <div id="header" className='h-screen hidden sm:block'> 
+    <div id='viewport' className='flex flex-col sm:flex-row select-none'>
+      <div id="header" className='h-max'> 
         <Sidebar/>
       </div>
 
